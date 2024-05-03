@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CCTNS</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="util.css" />
+    <link rel="stylesheet" href="media.css" />
+    <link rel="stylesheet" href="nexindex.css" />
+    <link rel="stylesheet" href="dialougebox.css">
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/cctns-portal-proj/images/channels4_profile.jpg"
+    />
+    <!-- <script src="index.js" defer></script> -->
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="cctns-img">
+        <img src="/images/cctns-logo-login-page.png" alt="" />
+      </div>
+      <div class="user-info">
+        <div class="user">
+          <h5>स्वागत</h5>
+          <p>Ramu singh</p>
+        </div>
+        <div class="user">
+          <h5>तिथि</h5>
+          <p id="dateTimeContainer">24/04/2024</p>
+        </div>
+        <div class="user">
+          <h5>समय</h5>
+          <p id="clock">11:37</p>
+        </div>
+      </div>
+      <div class="cctns-img-2">
+        <img src="/images/ashok_chakra.png" alt="" />
+        <img src="/images/cctns-rplogo.png" alt="" />
+        <div onclick="opens()" class="menu-icon" style="cursor: pointer">
+          <i class="ri-menu-line" style="font-size: 30px"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <div class="section">
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">मुख्य पृष्ठ </a></li>
+          <li><a href="#">शिकायत </a></li>
+          <li><a href="#">नागरिक सेवाएँ </a></li>
+          <li><a href="#">खोज स्थिति </a></li>
+          <li><a href="#">नागरिक जानकारी</a></li>
+          <li><a href="#">देखें प्राथमिकी </a></li>
+          <li><a href="#">स्थल का मानचित्र </a></li>
+          <li><a href="#">अक्सर पूछे जाने वाले प्रश्न </a></li>
+          <li><a href="#">नागरिक की प्रतिक्रिया</a></li>
+          <li><a href="#">सिटीजन टिप</a></li>
+          <li><a href="#">हमसे संपर्क करें</a></li>
+        </ul>
+      </nav>
+
+      <!-- MAIN-BAR -->
+      <div class="mainbar">
+        <div class="bar-1">
+          <ul>
+            <li>
+              <a href="#">मुख्य पृष्ठ <span>>></span></a>
+            </li>
+            <li>
+              <a href="#">पंजीकरण <span>>></span></a>
+            </li>
+            <li>
+              <a href="#">प्रथम सूचना रिपोर्ट (आई आई एफ -एक) <span>>></span></a>
+            </li>
+            <li>
+              <a href="#">
+                <p>नया पंजीकरण</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bar-2">
+          <img
+            src="https://police.rajasthan.gov.in/citizen/img/legal.png?stov=VU2Y-1Q5R-R484-C4KB-YQ07-7RSV-IGHU-TXXE"
+            alt=""
+          />
+          <img
+            src="https://police.rajasthan.gov.in/citizen/img/help.png?stov=VU2Y-1Q5R-R484-C4KB-YQ07-7RSV-IGHU-TXXE"
+            alt=""
+          />
+          <img
+            src="https://police.rajasthan.gov.in/citizen/img/logout.png?stov=VU2Y-1Q5R-R484-C4KB-YQ07-7RSV-IGHU-TXXE"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="primary-registration-line">
+        <p>प्राथमिकी पंजीकरण</p>
+        <p>*अनिवार्य क्षेत्र</p>
+      </div>
+
+      <style>
+        .abc button:nth-child(1) {
+          border: 1px solid gray;
+          background: #e4bc5e;
+          color: black;
+        }
+      </style>
+
+      <!-- MAIN BUTTONS -->
+      <div class="main-btn-div">
+        <a href="index.html">
+          <button class="main-btn1 m-btn">शिकायतकर्ता</button>
+        </a>
+        <a href="victim.html">
+          <button class="main-btn1 m-btn">पीड़ित सूचना</button>
+        </a>
+        <a href="incident-spot.html" class="abc">
+          <button class="main-btn1 m-btn">घटना – स्थल</button>
+        </a>
+        <a href="vehicle-info.html">
+          <button class="main-btn1 m-btn">वाहन का विवरण</button>
+        </a>
+      </div>
+
+      <!-- INFO SECTION -->
+      <div class="hero-section">
+        <!-- Form Containers -->
+        <style>
+          .vehicle-fill-info {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            border: 2px solid white;
+            background: #2b6ac1;
+            color: white;
+          }
+          .vehicle-fill-info .head {
+            border-left: 2px solid white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+          }
+        </style>
+
+        <div class="form">
+          <div class="vehicle-fill-info">
+            <div class="head">क्र.सं</div>
+            <div class="head">घटना से-तक (दिनांक / समय)</div>
+            <div class="head">पुलिस स्टेशन से दिशा</div>
+            <div class="head">पुलिस स्टेशन से दूरी (किमी में )</div>
+            <div class="head">क्षेत्र</div>
+            <div class="head">शहर</div>
+            <div class="head">संशोधित करें</div>
+            <div class="head">हटाएँ</div>
+            <p></p>
+          </div>
+
+          <div class="btn-div" style="text-align: right; margin: 30px 0">
+            &nbsp; &nbsp;
+            <button class="saheje" style="height: 35px; width: 200px">
+              नया जोड़ें
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="sho-submit-btn">
+        <button>ई-एफ़.आई.आऱ को एस.एच.ओ.को प्रस्तुत करे</button>
+        <button>ई-एफ़.आई.आऱ को एस.एच.ओ. को भेजने से पूर्व देखे</button>
+      </div>
+    </div>
+  </body>
+</html>

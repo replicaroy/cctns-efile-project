@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+body{
+  overflow-x: hidden;
+}
+.section {
+  padding: 0 1%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 2%;
+  flex-wrap: wrap;
+}
+.cctns-img {
+  width: 300px;
+  height: 50px;
+}
+.cctns-img img {
+  width: 100%;
+}
+.user-info {
+  font-size: 14px;
+}
+.user-info h5 {
+  font-size: 14px;
+  width: 20px;
+  /* margin-bottom: 5px; */
+}
+.cctns-img-2 {
+  display: flex;
+  gap: 0 20px;
+  width: 30%;
+  height: 50px;
+  justify-content: flex-end;
+}
+.cctns-img-2 img {
+  width: 10px 20%;
+}
+.user {
+  display: flex;
+  gap: 100px;
+}
+
+/* NAVBAR STYLING */
+
+.navbar > ul {
+  /* position: relative; */
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 11px;
+  font-weight: bold;
+  color: white;
+  background: #19467f;
+  background: linear-gradient(180deg, #3573c4, #134c91);
+
+  padding: 7px;
+}
+.navbar > ul li {
+  border-right: 1px solid white;
+  padding-right: 5px;
+}
+.navbar > ul li a {
+  color: white;
+  font-size: 16px;
+}
+
+/* MAINBAR STYLING */
+
+.mainbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px 0 10px;
+  border-bottom: 1px solid rgb(206, 204, 204);
+}
+.mainbar .bar-1 ul {
+  display: flex;
+  gap: 10px;
+  /* font-size: 10px; */
+}
+.bar-1 > ul li a {
+  color: rgb(11, 62, 109);
+  font-size: 13px;
+}
+
+.bar-1 > ul li a span {
+  color: rgb(13, 49, 82);
+  font-size: 10px;
+}
+.bar-1 > ul > li > a > p {
+  color: rgb(0, 0, 0);
+  font-size: 11px;
+}
+.primary-registration-line {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+  border-bottom: 3px solid rgb(26, 70, 104);
+}
+.primary-registration-line > p:nth-child(2) {
+  color: red;
+  font-size: 12px;
+}
+
+/* MAIN-BUTTONS */
+.main-btn-div {
+  display: flex;
+  margin-top: 10px;
+  /* padding: 0 1%; */
+}
+
+.main-btn-div a button {
+  padding: 8px 6px;
+  margin-left: 4px;
+  border: none;
+  border-radius: 3px;
+    background: linear-gradient(180deg, #5ea1e4, #134a8d);
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.button {
+  background: linear-gradient(180deg, rgb(130, 86, 231), rgb(44, 14, 112));
+  background: #134a8d;
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 3px;
+
+}
+.active {
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 3px;
+  border: 1px solid gray;
+  background: #134a8d;
+  background:  #e4bc5e;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.hero-section {
+  margin-top: 20px;
+  border: 1px solid rgb(175, 174, 174);
+  border-radius: 10px;
+  height: 51vh;
+  padding: 0 10px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* HERO SECTION */
+.form {
+  margin-top: 20px;
+  height: 40vh;
+  padding: 0 3%;
+  overflow-y: scroll;
+}
+.hero-info-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, auto));
+  gap: 20px;
+}
+.hero-info-section label {
+  width: 35%;
+  color: rgb(9, 3, 3);
+  background-color: #e0e6ff;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-radius: 3px;
+}
+.hero-info-section label P {
+  margin-left: 15px;
+  font-size: 15px;
+}
+.info-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 20px;
+}
+.info-1 select {
+  width: 40%;
+  height: 30px;
+  margin-left: 10px;
+  outline: none;
+  border: none;
+  border: 1px solid rgb(198, 196, 196);
+  border-radius: 3px;
+  text-align: center;
+}
+.info-1 select option{ 
+  text-align: center;
+}
+.info-1 input {
+  width: 40%;
+  height: 30px;
+  margin-left: 10px;
+  outline: none;
+  border: none;
+  border: 1px solid rgb(177, 175, 175);
+  border-radius: 3px;
+}
+.info-1 input:focus {
+  outline: none;
+}
+
+/* HERO-SECTION-2 */
+.hero-section-2 {
+  margin-top: 20px;
+}
+.btn-div-2 button {
+  padding: 5px 10px;
+  border: none;
+  background: linear-gradient(180deg, #3573c4, #134c91);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+}
+.blank {
+  text-align: center;
+  margin-top: 30px;
+}
+.blank button {
+  padding: 5px 20px;
+  /* text-align: center; */
+  margin-top: 10px;
+  font-size: 16px;
+  color: black;
+}
+.sho-submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+.sho-submit-btn button {
+    /* margin-top: -20px; */
+  border-radius: 20px;
+  background: linear-gradient(to right, #2d65b0, #093b77);
+  font-weight: bold;
+  border-style: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 15px 20px;
+  width: 23;
+}
+
+.sho-submit-btn button:hover {
+
+  box-shadow: 0 0 10px #134c91;
+  transition-duration: 0.3s;
+}

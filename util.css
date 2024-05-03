@@ -1,0 +1,51 @@
+.flex{
+    display: flex; 
+}
+.align{
+    align-items: center;
+}
+.saheje{
+    background: linear-gradient(180deg, #5ea1e4, #134a8d);
+    color: #ffffff;
+    padding: 0 10px;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgb(255, 255, 255);
+    transition: all 0.4s ease-in-out;
+    display: inline;
+
+}
+.saheje:hover{
+    box-shadow: 0 0 2px rgb(76, 76, 76);
+    transition: all 0.4s ease-in-out;
+}
+.verify-btn{
+    padding: 0 5px;
+}
+.btn{
+    padding: 5px 10px;
+    border: none;
+    background: linear-gradient(180deg, #3573c4, #134c91);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+.hide{
+    display: none;
+}
+.center{
+    text-align: center;
+}
+.radio{
+    font-size: 12px;
+}
+.radio input{
+   width: 14px;
+}
+.upnamr{
+    width: 30%; text-align: left
+}

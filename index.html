@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CCTNS</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="util.css" />
+ <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="nexindex.css">
+    <link rel="stylesheet" href="dialougebox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+        integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="/cctns-portal-proj/images/channels4_profile.jpg" />
+    <script src="index.js" defer></script>
+    <script src="main.js" defer></script>  
+</head>
+
+<body >
+
+    <div class="loader-body">
+        <div class="loader"></div>
+    </div>
+    <div id="overlay">
+        <div id="dialogueBox" style="display: flex; justify-content: space-between; flex-direction: column;">
+            <h1 style="text-align: center; color: #2B5EBA; border-bottom: 3px solid #2B5EBA;">Disclaimer</h1>
+
+            <p>ई-एफआईआर की सुविधा मात्र वाहन चोरी की शिकायत दर्ज करने हेतु वैकल्पिक व्यवस्था के रूप में उपलब्ध करवाई गई
+                हैं,
+                बशर्ते कि :- (e-FIR facility has been provided as an alternative arrangement to lodge complaint
+                regarding
+                vehicle theft only,provided that:-)
+            </p>
+            <ul>
+                <li>मुल्जिम अज्ञात हो | (Accused is unknown)</li>
+                <li>घटना के दौरान चोट / बल प्रयोग नहीं हुआ हो |(No use of force/injury during incident) .</li>
+            </ul>
+            <p>इस प्रकार की चोरी की घटना ,जिसमे मुल्जिम ज्ञात हो अथवा घटना के दौरान चोट /बल प्रयोग किया गया हो , की
+                शिकायत
+                संबंधित पुलिस थाने में ही दर्ज करवाई जा सकती है | (Theft complaint,where accused is known or there is
+                use of
+                force/injury,canbe lodged in respective Police Station only)</p>
+
+            <p>ई-एफआईआर की सुविधा का उपयोग करने हेतु शिकायतकर्त्ता के मोबाईल नम्बर एवं आधार नम्बर दर्ज करना अनिवार्य हैं
+                क्योंकि ई -हस्ताक्षर की आवश्यकता होगी | (Mobile No. and Aadhar No.of complainant are mandatory for using
+                services of e-FIR, As e signature is required)</p>
+
+            <p>ई-एफआईआर आमजन की सुविधा हेतु उपलब्ध करवाई गई है , गलत सुचना देने अथवा इस सुविधा के दुरूपयोग किये जाने की
+                स्थिति में शिकायतकर्त्ता के विरुद्ध आईपीसी के तहत क़ानूनी कार्रवाई अमल में लाई जावेगी | (e-FIR facility
+                has
+                been provided to facilitate common people,incase of lodging malafide complaint or misuse of the
+                facility,legal proceeding under IPC shall be initiated against the complainant)</p>
+            <br> <br>
+            <div class="btn-div" style="">
+                <button id="close-btn" style="" onclick="closes()">I AGREE</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- HEADER-SECTION -->
+    <!-- <div class="header-dad" > -->
+    <header class="header">
+        <div class="cctns-img">
+            <img src="images/cctns-logo-login-page.png" alt="" />
+        </div>
+        <div class="user-info">
+            <div class="user">
+                <h5>स्वागत</h5>
+                <p>Ramu singh</p>
+            </div>
+            <div class="user">
+                <h5>तिथि</h5>
+                <p id="dateTimeContainer">24/04/2024</p>
+            </div>
+            <div class="user">
+                <h5>समय</h5>
+                <p id="clock">11:37</p>
+            </div>
+        </div>
+        <div class="cctns-img-2">
+            <img src="images/ashok_chakra.png" alt="" />
+            <img src="images/cctns-rplogo.png" alt="" />
+            <div onclick="opens()" class="menu-icon " style=" cursor: pointer;">
+                <i class="ri-menu-line" style="font-size: 40px;"></i>
+            </div>
+
+        </div>
+    </header>
+<!-- </div> -->
+
+    <!-- NAVBAR -->
+    <div class="section" style="position: relative; ">
+        <nav class="navbar">
+            <ul>
+                <div onclick="closes()" class="cross" style="position: absolute;
+                 top: 10px; right: 15px; font-size:27px;color: rgb(4, 4, 4);  ">
+                    <i class="ri-close-large-line"></i>
+                </div>
+                <li><a href="#">मुख्य पृष्ठ </a></li>
+                <li><a href="#">शिकायत </a></li>
+                <li><a href="#">नागरिक सेवाएँ </a></li>
+                <li><a href="#">खोज स्थिति </a></li>
+                <li><a href="#">नागरिक जानकारी</a></li>
+                <li><a href="#">देखें प्राथमिकी </a></li>
+                <li><a href="#">स्थल का मानचित्र </a></li>
+                <li><a href="#">अक्सर पूछे जाने वाले प्रश्न </a></li>
+                <li><a href="#">नागरिक की प्रतिक्रिया</a></li>
+                <li><a href="#">सिटीजन टिप</a></li>
+                <li><a href="#">हमसे संपर्क करें</a></li>
+          
+            </ul>
+
+        </nav>
+
+        <!-- MAIN-BAR -->
+        <div class="mainbar">
+            <div class="bar-1">
+                <ul>
+                    <li> <a href="#">मुख्य पृष्ठ <span>>></span></a> </li>
+                    <li> <a href="#">पंजीकरण <span>>></span></a> </li>
+                    <li> <a href="#">प्रथम सूचना रिपोर्ट (आई आई एफ -एक) <span>>></span></a> </li>
+                    <li> <a href="#">
+                            <p>नया पंजीकरण</p>
+                        </a> </li>
+                </ul>
+            </div>
+            <div class="bar-2">
+                <img src="https://police.rajasthan.gov.in/citizen/img/legal.png?stov=VU2Y-1Q5R-R484-C4KB-YQ07-7RSV-IGHU-TXXE"
+                    alt="" />
+                <img src="https://police.rajasthan.gov.in/citizen/img/help.png?stov=VU2Y-1Q5R-R484-C4KB-YQ07-7RSV-IGHU-TXXE"
+                    alt="" />
+                <img src="https://police.rajasthan.gov.in/citizen/img/logout.png?stov=VU2Y-1Q5R-R484-C4KB-YQ07-7RSV-IGHU-TXXE"
+                    alt="" />
+            </div>
+        </div>
+
+        <div class="primary-registration-line">
+            <p>प्राथमिकी पंजीकरण</p>
+            <p>*अनिवार्य क्षेत्र</p>
+        </div>
+        <style>
+            .abc button:nth-child(1) {
+                border: 1px solid gray;
+                background: #e4bc5e;
+                color: black;
+            }
+        </style>
+
+        <!-- MAIN BUTTONS -->
+        <div class="main-btn-div">
+            <a href="#" class="abc" > <button
+                    class="main-btn main-btn1 m-btn">शिकायतकर्ता</button> </a>
+            <a href="victim.html"> <button class=" main-btn main-btn1 m-btn">पीड़ित सूचना</button> </a>
+            <a href="incident-spot.html"> <button class=" main-btn main-btn1 m-btn">घटना – स्थल</button> </a>
+            <a href="vehicle-info.html"> <button class=" main-btn1 m-btn">वाहन का विवरण</button> </a>
+        </div>
+
+        <!-- INFO SECTION -->
+        <!-- COMPLAINANT-CONTAINER-FORM-1 //////////////////////////////////////////////////////////////// -->
+        <div class="hero-section hero " id="page1">
+            <!-- Form Containers -->
+            <div class="main-btn-div">
+                <button class="main-btn main-btn2 m-btn button" onclick="openForm('form1')">व्यक्तिगत जानकारी</button>
+                <button class="main-btn main-btn2 m-btn button" onclick="openForm('form2')">पता</button>
+                <button class=" main-btn main-btn2 m-btn button" onclick="openForm('form3')">अन्य जानकारी</button>
+            </div>
+            <!-- PERSONNEL-INFO- SECTION ///////////////////////////////////////////////////////////////////////-->
+            <div class="form hide " id="form1">
+                <div class="outer-dive">
+                    <div class="inner-div-one">
+                        <div class="form-one">
+                            <button class="summery-btn saheje"> व्यक्तिगत विवरण</button>
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>लिंग <span class="mandatory">*</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <select name="select" id="">
+                                        <option value="0">-----चयन-----</option>
+                                        <option value="1">अज्ञात</option>
+                                        <option value="2">पुरुष</option>
+                                        <option value="3">महिला</option>
+                                        <option value="4">हिजड़ा/किन्‍नर</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>प्रथम नाम <span class="mandatory">*</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>मध्य नाम</p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>अंतिम नाम</p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>उपनाम</p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-two">
+                            <button class="summery-btn saheje"> अन्य विवरण</button>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>वैवाहिक स्थिति</p>
+                                </div>
+                                <div class="label-input">
+                                    <select name="select" id="">
+                                        <option value="0">-----चयन-----</option>
+                                        <option value="1">अज्ञात</option>
+                                        <option value="2">पुरुष</option>
+                                        <option value="3">महिला</option>
+                                        <option value="4">हिजड़ा/किन्‍नर</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>मोबाईल नंबर <span class="mandatory">*</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <div class="inner-labeliinput" style="display: flex; gap: 4px;">
+                                        <input type="text" placeholder="+91" disabled style="width: 50px;">
+                                        <input type="text" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-field">
+                                <div class="label-input">
+                                    <button class="saheje"
+                                        style=" min-width: 100px;  height: 30px; margin-bottom: 4px;"> मोबाईल नंबर
+                                        सत्यापित करें</button>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>लैंडलाइन नंबर</p>
+                                </div>
+                                <div class="label-input">
+                                    <div class="inner-labeliinput" style="display: flex; gap: 4px;">
+                                        <input type="text" placeholder="+91" disabled style="width: 50px;">
+                                        <input type="text" placeholder="">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>ईमेल आईडी</p>
+                                </div>
+                                <div class=" email-div label-input ">
+                                    <div class="inner-labeliinput" style="display: flex; gap: 4px;">
+                                        <input type="email" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-field">
+                                <div class="label-input">
+                                    <div class="inner-labeliinput" style="display: flex; gap: 4px;">
+                                        <button class="saheje"
+                                            style=" min-width: 100px; height: 30px; margin-bottom: 4px;"> ईमेल आईडी
+                                            सत्यापित करें</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>क्या पीड़ित और शिकायतकर्ता एक ही हैं?</p>
+                                </div>
+                                <div class="label-input " style="text-align: left;">
+                                    <input type="checkbox" placeholder="" style="width: 5%;">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="inner-div-two">
+                        <div class="form-one">
+                            <button class="summery-btn saheje"> संबंध विवरण</button>
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>संबंध प्रकार <span class="mandatory">*</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <select name="select" id="">
+                                        <option value="0">-----चयन-----</option>
+                                        <option value="1">अज्ञात</option>
+                                        <option value="2">पुरुष</option>
+                                        <option value="3">महिला</option>
+                                        <option value="4">हिजड़ा/किन्‍नर</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>संबंधी का नाम <span class="mandatory">*</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>संबंधी का उपनाम</p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>श्रेणी <span class="mandatory">*</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <select name="select" id="">
+                                        <option value="0">-----चयन-----</option>
+                                        <option value="1">अज्ञात</option>
+                                        <option value="2">पुरुष</option>
+                                        <option value="3">महिला</option>
+                                        <option value="4">हिजड़ा/किन्‍नर</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-two">
+                            <p></p>
+                            <button class="summery-btn saheje"> आयु विवरण</button>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>जन्म तिथि</p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="date">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>आयु (वर्ष/महीना) <span class="mandatory">*</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>जन्म का वर्ष</p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>आयु सीमा(से - तक)</p>
+                                </div>
+                                <div class="label-input">
+                                    <div class="inner-labeliinput" style="display: flex; gap: 4px;">
+                                        <input type="text" placeholder="" style="max-width: 120px;">
+                                        <input type="text" placeholder="" style="max-width: 120px;">
+                                    </div>
+                                    <!-- <input type="email" placeholder="" style="width: 45%;" >
+                                    <input type="email" placeholder="" style="width: 45%;" > -->
+                                </div>
+                                <!-- <button class="saheje" style=" width: 230px;  height: 35px;"> रीसेट करें</button> -->
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label-input">
+                                    <button class="saheje" style=" min-width: 100px;  height: 30px; ">सत्यापित
+                                        करें</button>
+                                </div>
+                            </div>
+                            <div class="blank-btn" style="text-align: center;">
+                                <button class="saheje blank-btn"> रिक्त करें</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ADDRESS- SECTION ///////////////////////////////////////////////////////////////////////-->
+            <div class="form hide" id="form2">
+                <div class="outer-dive">
+                    <div class="inner-div-one">
+                        <div class="form-one">
+                            <button class="summery-btn saheje"> स्थायी पता</button>
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>मकान सं. </p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>गली का नाम </p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>कॉलोनी / इलाक़ा /क्षेत्र</p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>ग्राम / नगर / शहर <span class="mandatory">&nbsp; *</span></p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>तहसील / ब्लॉक / मंडल </span></p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+
+                                    <p >वर्तमान पता <span class="mandatory">*</span></p>
+                                </div>
+                                <div class="label-input" style="font-size: 15px;">
+
+                                    वर्तमान के लिए भी वही
+                                    <div class="radio-div flex" style="width: 150px; ">
+                                        हां <input type="radio" placeholder="" name="radio">
+                                        नहीं <input type="radio" placeholder="" name="radio">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-two">
+                            <!-- <button class="summery-btn saheje"> अन्य विवरण</button> -->
+                            <div class="input-field " style="visibility: hidden;">
+                                <div class="label">
+                                    <p>देश <span class="mandatory">*</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <select name="select" id="">
+                                        <option value="0" disabled>-----Bharat-----</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>देश <span class="mandatory">*</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <select name="select" id="">
+                                        <option value="0" disabled>-----Bharat-----</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>राज्य <span class="mandatory">*</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <select name="select" id="">
+                                        <option value="0" disabled>-----Rajasthan-----</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>जिला <span class="mandatory">*</span></p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>पुलिस स्टेशन</p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="" disabled>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>पिन कोड</p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="inner-div-two">
+                        <div class="form-one">
+                            <button class="summery-btn saheje present-add" class=""> वर्तमान पता</button>
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>मकान सं<span class="mandatory">*</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>गली का नाम <span class="mandatory">*</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>कॉलोनी / इलाक़ा /क्षेत्र</p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>तहसील / ब्लॉक / मंडल</p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-two">
+                            <!-- <button class="summery-btn saheje"> अन्य विवरण</button> -->
+
+                            <div class="input-field " style="visibility: hidden;">
+                                <div class="label">
+                                    <p>देश <span class="mandatory">*</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <select name="select" id="">
+                                        <option value="0" disabled>-----Bharat-----</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>देश <span class="mandatory">*</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <select name="select" id="">
+                                        <option value="0" disabled>-----Bharat-----</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>राज्य <span class="mandatory">*</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <select name="select" id="">
+                                        <option value="0" disabled>-----Rajasthan-----</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>जिला <span class="mandatory">*</span></p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>पुलिस स्टेशन</p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="" disabled>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>पिन कोड</p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-div" style="text-align: right; margin: 30px 0; display: flex;">
+                    &nbsp; &nbsp; <button class="saheje" style="height: 35px; width: 200px;">रिक्त करें</button>
+                    &nbsp; &nbsp; <button class="saheje " style="height: 35px; width: 200px;">रिक्त करें</button>
+
+                </div>
+
+
+
+
+            </div>
+
+            <!-- OTHER-INFO- SECTION ///////////////////////////////////////////////////////////////////////-->
+            <div class="form hide  " id="form3">
+                <div class="outer-dive">
+                    <div class="inner-div-one" >
+                        <div class="form-one">
+                            <!-- <button class="summery-btn saheje"> स्थायी पता</button> -->
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>व्यवसाय <span class="mandatory">*</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <select name="select" id="">
+                                        <option value="0">-----चयन-----</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>राष्ट्रीयता हेतु देश <span class="mandatory">&nbsp; *</span> </p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>पहचान का प्रकार</p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <div class="label">
+                                    <p>आईडी कार्ड संख्‍या </p>
+                                </div>
+                                <div class="label-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+
+                                <div class="label-input">
+                                    <button class="saheje" style="height: 35px; width: 200px;">आईडी कार्ड संख्‍या
+                                        जोडें</button>
+
+                                </div>
+                            </div>
+
+                            <div class="btn-div" style="text-align: right; margin: 30px 0;">
+                                &nbsp; &nbsp; <button class="saheje" style="height: 35px; width: 200px;">रिक्त
+                                    करें</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VICTOM-CONTAINER-FORM-2 //////////////////////////////////////////////////////////////// -->
+
+        <div class="sho-submit-btn">
+            <button>ई-एफ़.आई.आऱ को एस.एच.ओ.को प्रस्तुत करे</button>
+            <button>ई-एफ़.आई.आऱ को एस.एच.ओ. को भेजने से पूर्व देखे</button>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function () {
+            document.querySelector('.loader').style.display = 'none'
+            document.querySelector('.loader-body').style.display = 'none'
+            document.getElementById('overlay').style.display = 'block';
+        }, 2000);
+
+        document.getElementById('overlay').addEventListener("click", function () {
+            document.querySelector('#overlay').style.display = 'none';
+        });
+    });
+
+    document.getElementById("close-btn").addEventListener("click", function () {
+        document.querySelector('#overlay').style.display = 'none';
+    });
+
+</script>
+</html>
